@@ -147,7 +147,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-            <img src="/oth3l-logo.svg" alt="OTH3L" className="h-8 logo" />
+              <img 
+                src="/OTH3L Transparent (2).png" 
+                alt="OTH3L" 
+                className="h-12 w-auto transition-transform duration-300 hover:scale-105"
+                style={{ maxWidth: '180px', objectFit: 'contain' }}
+              />
             </div>
             
             {/* Desktop Navigation */}

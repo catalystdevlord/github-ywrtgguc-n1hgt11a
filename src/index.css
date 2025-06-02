@@ -36,14 +36,26 @@
   }
 }
 
-.site-logo-link {
-    display: inline-block; /* Helps with alignment and sizing */
+/* Updated logo styles */
+.site-logo {
+  height: 48px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.logo-img { /* This targets the class we put on the <img> tag */
-    width: 180px;  /* Set a width you like */
-    height: auto;  /* Keeps the SVG's aspect ratio */
-    display: block; /* Or inline-block, depending on layout needs */
+.site-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Rest of the styles remain the same */
+.site-logo-link {
+    display: inline-block;
+}
+
+.logo-img {
+    width: 180px;
+    height: auto;
+    display: block;
 }
 
 .cta-button {
