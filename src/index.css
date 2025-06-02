@@ -38,7 +38,7 @@
 
 /* Updated logo styles */
 .site-logo {
-  height: 48px;
+  height: 56px;
   width: auto;
   transition: transform 0.3s ease;
 }
@@ -53,7 +53,7 @@
 }
 
 .logo-img {
-    width: 180px;
+    width: 200px;
     height: auto;
     display: block;
 }

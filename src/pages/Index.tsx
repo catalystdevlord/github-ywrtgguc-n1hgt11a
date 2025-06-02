@@ -150,8 +150,8 @@ const Index = () => {
               <img 
                 src="/OTH3L Transparent (2).png" 
                 alt="OTH3L" 
-                className="h-12 w-auto transition-transform duration-300 hover:scale-105"
-                style={{ maxWidth: '180px', objectFit: 'contain' }}
+                className="h-14 w-auto transition-transform duration-300 hover:scale-105"
+                style={{ maxWidth: '200px', objectFit: 'contain' }}
               />
             </div>
             
