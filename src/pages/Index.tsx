@@ -145,13 +145,34 @@ const Index = () => {
         isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
       }`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
+          <div className="flex items-center justify-between h-24">
+            <div className="flex items-center relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
               <img 
                 src="/OTH3L Transparent (2).png" 
                 alt="OTH3L" 
-                className="h-14 w-auto transition-transform duration-300 hover:scale-105"
-                style={{ maxWidth: '200px', objectFit: 'contain' }}
+                className="h-20 w-auto relative transform transition-all duration-700 hover:scale-110 group-hover:rotate-2 group-hover:brightness-110"
+                style={{
+                  maxWidth: '280px',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 4px 6px rgba(255, 20, 147, 0.2))',
+                  willChange: 'transform',
+                  transformStyle: 'preserve-3d',
+                  perspective: '1000px'
+                }}
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  const centerX = rect.width / 2;
+                  const centerY = rect.height / 2;
+                  const rotateX = (y - centerY) / 20;
+                  const rotateY = (centerX - x) / 20;
+                  e.currentTarget.style.transform = `scale(1.1) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1) rotateX(0) rotateY(0)';
+                }}
               />
             </div>
             
